@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: `Interférence - Radio Mega`,
+    title: `InterfÃÂ©rence - Radio Mega`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -8,7 +8,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-google-fonts`,
       options: {
-        fonts: [`montserrat`]
+        fonts: [`Barlow Condensed`]
       }
     }
   ],

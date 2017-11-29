@@ -5,25 +5,78 @@ const Wrapper = styled.section`
   height: 100vh;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  padding: 1em 2em;
+  align-items: ${props => props.align ? props.align : 'center'};
   justify-content: center;
+
+  p {
+    font-size: 14px;
+    line-height: 1.5em;
+    ${props => props.align ? `
+      text-align: ${props.align};
+    `: null}
+  }
+
   ${props => props.image ? `
     background: url(${props.image}) no-repeat;
     background-size: cover;
   ` : null}
+
+  ${props => props.background ? `
+    background-color: ${props.background};
+  ` : null
+  }
+
   ${props => props.color ? `
-    background-color: ${props.color}
-  ` : null}
+    color: ${props.color};
+  ` : null
+  }
+
+  h2 {
+    ${props => props.color ? `
+      color: ${props.color};
+    ` : null }
+    position: relative;
+    margin-bottom: 1.25em;
+    &:after {
+      height: 4px;
+      width: 50px;
+      content: '';
+      display: block;
+      bottom: -15px;
+      background: ${props => props.color ? `
+        ${props.color}
+      ` : `black`};
+      position: absolute;
+      margin: auto;
+      ${props => props.align ?
+          `
+          ${props.align}: 0;
+        ` : `
+          left: 0;
+          right: 0;
+        `
+      }
+    }
+  }
 `
 
 const Section = ({
+  align,
+  background,
   children,
   color,
   image,
   title,
 }) => (
-  <Wrapper image={image} color={color}>
-    <h2>{title}</h2>
+  <Wrapper
+    align={align}
+    background={background}
+    color={color}
+    image={image}
+    title={title}
+  >
+    {title && <h2>{title}</h2>}
     {children}
   </Wrapper>
 )

@@ -7,6 +7,7 @@ import Helmet from 'react-helmet'
 import Header from '../components/Header'
 
 import './index.css'
+import background from './bg.jpg'
 
 const Content = styled.div`
   margin: '0 auto';
@@ -14,8 +15,13 @@ const Content = styled.div`
   padding: '0px 1.0875rem 1.45rem';
 `
 
+const Main = styled.main`
+  padding: 30 0 200px 0;
+  background: #e5763d;
+`
+
 const TemplateWrapper = ({ children }) => (
-  <div>
+  <Main>
     <Helmet
       title="Interferences"
       meta={[
@@ -27,7 +33,7 @@ const TemplateWrapper = ({ children }) => (
     <Content>
       {children()}
     </Content>
-  </div>
+  </Main>
 )
 
 TemplateWrapper.propTypes = {
