@@ -30,14 +30,20 @@ const withScroll = ComposedComponent => class ScrollDecorator extends Component 
 
   getWindowScrollTop() {
     // Get scroll position, with IE fallback
-    if (!window) return
-    else return window.pageYOffset || document.documentElement.scrollTop
+    if (typeof window !== `undefined`) {
+      return window.pageYOffset || document.documentElement.scrollTop
+    }
+    return
   }
 
   handleInterval() {
     // Interval is only used to throttle animation frame
-    cancelAnimationFrame(this.requestID)
-    this.requestID = requestAnimationFrame(this.handleRequestAnimationFrame)
+
+    if (typeof window !== `undefined`) {
+      cancelAnimationFrame(this.requestID)
+      this.requestID = requestAnimationFrame(this.handleRequestAnimationFrame)
+    }
+    return
   }
 
   handleRequestAnimationFrame() {

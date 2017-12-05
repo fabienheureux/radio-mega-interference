@@ -1,6 +1,7 @@
 module.exports = {
+  pathPrefix: `/radio-mega-interference`,
   siteMetadata: {
-    title: `InterfÃÂ©rence - Radio Mega`,
+    title: `Interférence - Radio Mega`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,

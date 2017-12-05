@@ -2,13 +2,6 @@ import React from 'react'
 import styled from 'styled-components'
 
 const Wrapper = styled.section`
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  padding: 1em 2em;
-  align-items: ${props => props.align ? props.align : 'center'};
-  justify-content: center;
-
   p {
     font-size: 14px;
     line-height: 1.5em;
@@ -61,6 +54,18 @@ const Wrapper = styled.section`
   }
 `
 
+const Inner = styled.div`
+  max-width: 960px;
+  height: 100vh;
+  margin: 0 auto;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 1em 2em;
+  align-items: ${props => props.align ? props.align : 'center'};
+  justify-content: center;
+`
+
 const Section = ({
   align,
   background,
@@ -76,8 +81,12 @@ const Section = ({
     image={image}
     title={title}
   >
-    {title && <h2>{title}</h2>}
-    {children}
+    <Inner
+      align={align}
+    >
+      {title && <h2>{title}</h2>}
+      {children}
+    </Inner>
   </Wrapper>
 )
 

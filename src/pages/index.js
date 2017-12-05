@@ -12,6 +12,7 @@ import LaurentGalandon from './LaurentGalandon'
 import LaRadio from './LaRadio'
 import LeProjet from './LeProjet'
 import LesActeurs from './LesActeurs'
+import LesPartenaires from './LesPartenaires'
 
 const Div = styled.div`
   height: 100vh;
@@ -44,11 +45,7 @@ const IndexPage = () => (
     <LaurentGalandon />
     <LaRadio />
     <LesActeurs />
-
-    <Section
-      title="Les partenaires"
-      id="les-partenaires"
-    />
+    <LesPartenaires />
   </div>
 )
 
