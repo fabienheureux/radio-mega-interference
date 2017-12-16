@@ -17,7 +17,7 @@ const Content = styled.div`
 
 const Main = styled.main`
   padding: 30 0 200px 0;
-  background: #e5763d;
+  background: rgb(179, 75, 36);
 `
 
 const TemplateWrapper = ({ children }) => (

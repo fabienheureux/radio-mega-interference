@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import styled from 'styled-components'
 
 import FontAwesomeIcon from '@fortawesome/react-fontawesome'
-import { faFacebook } from '@fortawesome/fontawesome-free-solid'
+import { faFacebook } from '@fortawesome/fontawesome-free-brands'
 
 import Player from './Player'
 
@@ -42,7 +42,7 @@ const Nav = styled.nav`
   top: 0;
   left: 0px;
   right: 0px;
-  background: #e5763d;
+  background: rgb(179, 75, 36);
 `
 
 const Li = styled.li`
@@ -68,9 +68,6 @@ class Header extends Component {
     const { scrollPosition } = this.props
     return(
       <Nav>
-        <Left>
-          <Li><FontAwesomeIcon icon={faFacebook} /></Li>
-        </Left>
         <Player />
         <Right>
           <Li>
@@ -98,6 +95,7 @@ class Header extends Component {
               les Partenaires
             </A>
           </Li>
+          <Li><FontAwesomeIcon icon={faFacebook} /></Li>
         </Right>
       </Nav>
     )

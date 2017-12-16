@@ -26,7 +26,7 @@ const P = styled.p`
 const LaurentGalandon = () => (
   <Section
     title="Laurent Galandon"
-    background="rebeccaPurple"
+    background="rgb(179, 75, 36)"
     id="laurent-galandon"
     color="#fafafa"
     align="left"
