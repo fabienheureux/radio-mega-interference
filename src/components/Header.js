@@ -1,6 +1,10 @@
 import React, { Component } from 'react'
 import styled from 'styled-components'
-import FontAwesome from 'react-fontawesome'
+
+import FontAwesomeIcon from '@fortawesome/react-fontawesome'
+import { faFacebook } from '@fortawesome/fontawesome-free-solid'
+
+import Player from './Player'
 
 import withScroll from '../utils/withScroll'
 
@@ -65,15 +69,10 @@ class Header extends Component {
     return(
       <Nav>
         <Left>
-          <Li><FontAwesome name='facebook' /></Li>
+          <Li><FontAwesomeIcon icon={faFacebook} /></Li>
         </Left>
-
+        <Player />
         <Right>
-          <Li>
-            <A href="la-fiction" title="Ecoutez la fiction">
-              Ecoutez la fiction
-            </A>
-          </Li>
           <Li>
             <A href="le-projet" title="Le projet">
               Le projet

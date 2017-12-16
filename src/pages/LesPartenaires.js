@@ -13,7 +13,7 @@ const Div = styled.div`
 
 const Img = styled.img`
   height: 75px;
-  margin: 0 10px;
+  margin: 0 50px;
   width: auto;
 `
 

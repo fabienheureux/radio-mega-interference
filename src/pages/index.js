@@ -6,6 +6,7 @@ import styled from 'styled-components'
 import Section from '../components/Section'
 import Slider from '../components/Slider'
 import Cover from './cover.png'
+import Titre from './titre.png'
 
 import LaurentGalandon from './LaurentGalandon'
 import LaRadio from './LaRadio'
@@ -15,7 +16,12 @@ import LesPartenaires from './LesPartenaires'
 import LaFiction from './LaFiction'
 
 const Div = styled.div`
-  height: 100vh;
+`
+
+const Img = styled.img`
+  background: rgb(179, 75, 36);
+  padding: 20px;
+  width: 650px;
 `
 
 const H1 = styled.h1`
@@ -25,23 +31,23 @@ const H1 = styled.h1`
   font-size: 150px;
   text-shadow: 0em 0em 10px rgba(0,0,0,0.2);
   font-family: Cyclone;
+  text-indent: -9999px;
 `
 
 const IndexPage = () => (
-  <div>
-    <Section>
+  <Div>
+    <Section image={Cover}>
       <H1>
         Interferences
       </H1>
+      <Img src={Titre} alt="Titre bd" />
     </Section>
-
-    <LaFiction />
     <LeProjet />
     <LaurentGalandon />
     <LaRadio />
     <LesActeurs />
     <LesPartenaires />
-  </div>
+  </Div>
 )
 
 export default IndexPage
