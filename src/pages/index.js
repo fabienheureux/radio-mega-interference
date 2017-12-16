@@ -4,7 +4,6 @@ import styled from 'styled-components'
 // import { Wave } from 'balekomponents'
 
 import Section from '../components/Section'
-import Player from '../components/Player'
 import Slider from '../components/Slider'
 import Cover from './cover.png'
 
@@ -13,6 +12,7 @@ import LaRadio from './LaRadio'
 import LeProjet from './LeProjet'
 import LesActeurs from './LesActeurs'
 import LesPartenaires from './LesPartenaires'
+import LaFiction from './LaFiction'
 
 const Div = styled.div`
   height: 100vh;
@@ -35,12 +35,7 @@ const IndexPage = () => (
       </H1>
     </Section>
 
-    <Section
-      title="La fiction"
-      id="la-fiction"
-    >
-      <Player />
-    </Section>
+    <LaFiction />
     <LeProjet />
     <LaurentGalandon />
     <LaRadio />

@@ -55,7 +55,7 @@ const Wrapper = styled.section`
 `
 
 const Inner = styled.div`
-  max-width: 960px;
+  max-width: 880px;
   height: 100vh;
   margin: 0 auto;
   width: 100%;
