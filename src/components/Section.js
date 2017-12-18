@@ -2,6 +2,10 @@ import React from 'react'
 import styled from 'styled-components'
 
 const Wrapper = styled.section`
+  a {
+    color: white;
+  }
+
   p {
     font-size: 14px;
     line-height: 1.5em;

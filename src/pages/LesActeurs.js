@@ -3,37 +3,24 @@ import styled from 'styled-components'
 
 import Section from '../components/Section'
 
-import ActeurPic from './acteur.jpg'
-
 const data = [
   {
     name: 'name',
-    description: 'n semper turpis vel cursus luctus. Suspendisse tincidunt egestas quam, eget sodales felis faucibus scelerisque. Suspendisse pulvinar accumsan ',
-    image: ActeurPic,
+    role: 'role',
   },
   {
     name: 'name',
-    description: 'n semper turpis vel cursus luctus. Suspendisse tincidunt egestas quam, eget sodales felis faucibus scelerisque. Suspendisse pulvinar accumsan ',
-    image: ActeurPic,
+    role: 'role',
   },
   {
     name: 'name',
-    description: 'n semper turpis vel cursus luctus. Suspendisse tincidunt egestas quam, eget sodales felis faucibus scelerisque. Suspendisse pulvinar accumsan ',
-    image: ActeurPic,
+    role: 'role',
   },
   {
     name: 'name',
-    description: 'n semper turpis vel cursus luctus. Suspendisse tincidunt egestas quam, eget sodales felis faucibus scelerisque. Suspendisse pulvinar accumsan ',
-    image: ActeurPic,
+    role: 'role',
   }
 ]
-
-const Img = styled.img`
-  border-radius: 50%;
-  width: 80%;
-  height: auto;
-  box-shadow: 0 0 10px rgba(0,0,0,.2);
-`
 
 const Acteur = styled.div`
   display: flex;
@@ -63,11 +50,10 @@ const LesActeurs = () => (
     id="les-acteurs"
   >
     <Acteurs>
-      {data.map(({ name, description, image }) =>
+      {data.map(({ name, role }) =>
         <Acteur width={data.length}>
           <Name>{name}</Name>
-          <Img src={image} alt={name} />
-          <P>{description}</P>
+          <P>{role}</P>
         </Acteur>
       )}
     </Acteurs>

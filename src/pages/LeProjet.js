@@ -15,8 +15,13 @@ const LeProjet = () => (
       id="le-projet"
     >
       <P>
-        Aenean lobortis velit eros, sit amet consectetur lectus bibendum sit amet. Curabitur ut vulputate est. Nam vel luctus leo. Nam sollicitudin volutpat mi, id tempor turpis bibendum vitae. Aliquam imperdiet quam sed justo interdum cursus. Sed eu nulla ipsum. Cras fermentum scelerisque eleifend. Ut feugiat ipsum ut eros lobortis, volutpat elementum nulla tempus. <br />
-        Integer vel augue sed magna pulvinar maximus. Donec non laoreet massa, vel facilisis urna. Ut gravida risus sapien, sit amet euismod velit pulvinar at. Praesent varius lorem gravida maximus hendrerit. Etiam lacinia ligula ut est consequat auctor. Cras in vestibulum sapien, quis pretium arcu. In dignissim vestibulum nulla eu faucibus.
+        Lorsqu’Alban et Pablo découvrent la célèbre Radio Caroline au début des années 1970, ils décident de partir à leur tour à l’assaut des ondes : ils créent Radio Nomade, leur radio pirate !
+        <br />
+        <br />
+        Quand ils émettent, Pablo est Rackham et Alban, Teach. Le premier propose une programmation musicale alternative ; le second offre la parole aux « marginaux » ou aux exclus de la société. Comme nombre de leurs homologues radiolibristes, nos deux héros sont dans l’illégalité totale. Du brouillage des ondes aux mises sur écoute ; de réquisitions en interrogatoires musclés, l’État giscardien n’entend pas voir son monopole remis en question.  C’est le début d’un combat pour la liberté d’expression… Et comme tout combat, il n’est pas sans d’intimes dommages collatéraux.
+        <br />
+        <br />
+        Aux côtés de Jeanne Puchol, Laurent Galandon nous présente Interférences, son nouveau docu-fiction dans la lignée de Lip, des héros ordinaires. Retour à la fin des années 1970, lorsque les radios libres se développent pour obtenir la liberté d’expression. Véritable leçon pour tous ceux qui considèrent ce droit et tant d’autres comme aujourd’hui bel et bien acquis.
       </P>
     </Section>
 )

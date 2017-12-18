@@ -29,7 +29,7 @@ const LaRadio = () => (
 
       <Img src={RadioMegaLogo} alt="Radio Mega Logo" />
       <P>
-        Ut dapibus ligula eget facilisis efficitur. Morbi dolor est, suscipit at neque quis, cursus fermentum urna. In bibendum eu tellus quis bibendum. Sed accumsan massa vel lectus consectetur, vel blandit massa convallis. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nam sodales est lectus. Pellentesque scelerisque sodales eros, vel porttitor ex. Vivamus eu lectus sem. In suscipit nibh non metus lacinia, nec gravida nibh placerat. Nam nec venenatis lorem. Morbi arcu orci, scelerisque sed bibendum quis, dictum vitae massa. Morbi pulvinar laoreet nulla.
+        Les radios libres ont plus de trente ans. Depuis 1981, l’accès aux médias radiophoniques s’est démocratisé. Média de communication sociale de proximité de l’agglomération Valentinoise, Radio Méga promeut l’information locale, l’expression et la pratique de la radiodiffusion par tous et pour tous.
       </P>
     </Div>
   </Section>
