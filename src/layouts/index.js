@@ -7,7 +7,6 @@ import Helmet from 'react-helmet'
 import Header from '../components/Header'
 
 import './index.css'
-import background from './bg.jpg'
 
 const Content = styled.div`
   margin: '0 auto';

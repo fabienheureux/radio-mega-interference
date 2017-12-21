@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import styled from 'styled-components'
 import Sound from 'react-sound'
-import track from './track.mp3'
+import track from './fiction.mp3'
 import FontAwesomeIcon from '@fortawesome/react-fontawesome'
 import { faPlayCircle, faPauseCircle } from '@fortawesome/fontawesome-free-solid'
 
@@ -13,6 +13,15 @@ const Duration = styled.div`
   height: 10px;
   border-radius: 5px;
   overflow: hidden;
+`
+
+const Loaded = styled.div`
+  position: absolute;
+  left: 0;
+  right: auto;
+  top: 0;
+  bottom: 0;
+  background: #777;
 `
 
 const Position = styled.div`
@@ -44,10 +53,12 @@ class Player extends Component {
     super()
 		this.state = {
 		  status: 'PAUSED',
+		  loaded: 0,
 		  position: 0,
 		}
     this.handlePlaying = this.handlePlaying.bind(this)
     this.handleClick = this.handleClick.bind(this)
+    this.handleLoading = this.handleLoading.bind(this)
   }
 
   handlePlaying({ position, duration }) {
@@ -70,6 +81,15 @@ class Player extends Component {
 	  })
 	}
 
+	handleLoading({ bytesLoaded, bytesTotal }) {
+	  this.setState((prevState, props) => {
+	    return {
+	      ...this.state,
+	      loaded: bytesLoaded * 100 / bytesTotal,
+	    }
+	  })
+	}
+
   render() {
     return(
       <Wrapper>
@@ -81,9 +101,11 @@ class Player extends Component {
 		    </div>
 		    <Duration>
 		      <Position style={{width: `${this.state.position}%`}} />
+		      <Loaded style={{width: `${this.state.loaded}%`}} />
 		    </Duration>
         <Sound
           onPlaying={this.handlePlaying}
+          onLoading={this.handleLoading}
           url={track}
           playStatus={Sound.status[this.state.status]}
         />
