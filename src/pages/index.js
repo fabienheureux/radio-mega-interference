@@ -43,6 +43,9 @@ const IndexPage = () => (
       <Img src={Titre} alt="Titre bd" />
     </Section>
     <LeProjet />
+    <Section background="black">
+      <Slider />
+    </Section>
     <LaurentGalandon />
     <LaRadio />
     <LesActeurs />

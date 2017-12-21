@@ -7,7 +7,8 @@ const Wrapper = styled.section`
   }
 
   p {
-    font-size: 14px;
+    font-size: 18px;
+    font-weight: lighter;
     line-height: 1.5em;
     ${props => props.align ? `
       text-align: ${props.align};

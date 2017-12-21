@@ -33,7 +33,7 @@ const Nav = styled.nav`
   display: flex;
   color: white;
   justify-content: space-between;
-  font-size: 14px;
+  font-size: 15px;
   font-weight: 300;
   letter-spacing: 1px;
   padding: 2em;
