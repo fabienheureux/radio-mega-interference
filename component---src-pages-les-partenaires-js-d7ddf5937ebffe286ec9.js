@@ -1,2 +1,0 @@
-webpackJsonp([0xd1cbb6a80098],{75:function(e,n,u){"use strict";function t(e){return e&&e.__esModule?e:{default:e}}function d(e,n){return e.raw=n,e}n.__esModule=!0;var a=d(["\n  padding: 2em;\n"],["\n  padding: 2em;\n"]),r=u(2),l=t(r),o=u(11),c=t(o),f=c.default.div(a),i=function(){return l.default.createElement(f,null,"Coucou")};n.default=i,e.exports=n.default}});
-//# sourceMappingURL=component---src-pages-les-partenaires-js-d7ddf5937ebffe286ec9.js.map
