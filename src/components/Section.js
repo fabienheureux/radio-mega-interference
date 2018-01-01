@@ -79,6 +79,7 @@ const Section = ({
   children,
   color,
   display,
+  id,
   image,
   title,
 }) => (
@@ -86,6 +87,7 @@ const Section = ({
     align={align}
     background={background}
     color={color}
+    id={id}
     image={image}
     title={title}
   >
