@@ -62,12 +62,14 @@ const Wrapper = styled.section`
 const Inner = styled.div`
   max-width: 880px;
   height: 100vh;
+  min-height: 660px;
+  max-height: 880px;
   margin: 0 auto;
   width: 100%;
-  display: flex;
   flex-direction: column;
   padding: 1em 2em;
   align-items: ${props => props.align ? props.align : 'center'};
+  display: ${props => props.display ? props.display : 'flex'};
   justify-content: center;
 `
 
@@ -76,6 +78,7 @@ const Section = ({
   background,
   children,
   color,
+  display,
   image,
   title,
 }) => (
@@ -88,6 +91,7 @@ const Section = ({
   >
     <Inner
       align={align}
+      display={display}
     >
       {title && <h2>{title}</h2>}
       {children}

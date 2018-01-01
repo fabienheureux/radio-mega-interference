@@ -1,10 +1,15 @@
 import React, { Component } from 'react'
 import SliderComponent from 'react-slick'
 
+const context = require.context('./pictures', true, /\.jpg$/)
+const pictures = []
+context.keys().forEach(key => pictures.push(context(key)))
+
 class Slider extends Component {
   render() {
 		const settings = {
-    	dots: true,
+		  // adaptiveHeight: true,
+    	dots: false,
     	infinite: true,
     	speed: 500,
     	slidesToShow: 1,
@@ -13,12 +18,11 @@ class Slider extends Component {
 
 		return (
       <SliderComponent {...settings}>
-        <div><h3>1</h3></div>
-        <div><h3>2</h3></div>
-        <div><h3>3</h3></div>
-        <div><h3>4</h3></div>
-        <div><h3>5</h3></div>
-        <div><h3>6</h3></div>
+        {pictures.map(picture =>
+          <div key={picture}>
+            <img key={picture} src={picture} />
+          </div>
+        )}
       </SliderComponent>
     )
   }
