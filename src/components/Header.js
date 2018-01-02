@@ -85,11 +85,6 @@ class Header extends Component {
             </Scrollchor>
           </Li>
           <Li>
-            <Scrollchor to="#photos" title="Photos">
-              Photos
-            </Scrollchor>
-          </Li>
-          <Li>
             <Scrollchor to="#laurent-galandon" title="Laurent Galandon">
               Laurent Galandon
             </Scrollchor>
@@ -97,6 +92,11 @@ class Header extends Component {
           <Li>
             <Scrollchor to="#la-radio" title="La radio">
               La radio
+            </Scrollchor>
+          </Li>
+          <Li>
+            <Scrollchor to="#photos" title="Photos">
+              Photos
             </Scrollchor>
           </Li>
           <Li>

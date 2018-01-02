@@ -55,6 +55,7 @@ class Player extends Component {
 		  status: 'PAUSED',
 		  loaded: 0,
 		  position: 0,
+		  duration: 0,
 		}
     this.handlePlaying = this.handlePlaying.bind(this)
     this.handleClick = this.handleClick.bind(this)
@@ -65,7 +66,8 @@ class Player extends Component {
 	  this.setState((prevState, props) => {
 	    return {
 	      ...this.state,
-	      position: position * 100 / duration,
+	      position,
+	      duration,
 	    }
 	  })
   }
@@ -81,7 +83,7 @@ class Player extends Component {
 	  })
 	}
 
-	handleLoading({ bytesLoaded, bytesTotal }) {
+	handleLoading({ bytesLoaded, bytesTotal, duration }) {
 	  this.setState((prevState, props) => {
 	    return {
 	      ...this.state,
@@ -91,6 +93,21 @@ class Player extends Component {
 	}
 
   render() {
+    const convertMs = milliseconds => {
+      return {
+        seconds: parseInt(
+          ((milliseconds / 1000) % 60)
+        ),
+        minutes: parseInt(
+          ((milliseconds / 1000) / 60)
+        ),
+      }
+    }
+
+    const formatNumber = numberToFormat => `${0}${numberToFormat}`.slice(-2)
+
+    console.log(convertMs(this.state.position))
+
     return(
       <Wrapper>
 			  <div onClick={this.handleClick}>
@@ -109,6 +126,7 @@ class Player extends Component {
           url={track}
           playStatus={Sound.status[this.state.status]}
         />
+        {formatNumber(convertMs(this.state.position).minutes)}:{formatNumber(convertMs(this.state.position).seconds)}
       </Wrapper>
     )
   }
