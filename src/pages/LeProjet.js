@@ -5,6 +5,9 @@ import Section from '../components/Section'
 
 const P = styled.p`
   column-count: 2;
+  @media (max-width: 800px) {
+    column-count: 1;
+  }
 `
 
 const LeProjet = () => (

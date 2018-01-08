@@ -34,7 +34,7 @@ const Position = styled.div`
 `
 
 const Wrapper = styled.div`
-  width: 400px;
+  width: 320px;
   height: 30px;
   display: flex;
   align-items: center;

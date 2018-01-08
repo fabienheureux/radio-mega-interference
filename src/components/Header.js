@@ -109,6 +109,11 @@ class Header extends Component {
               les Partenaires
             </Scrollchor>
           </Li>
+          <Li>
+            <Scrollchor to="#a-propos" title="A propos">
+              à propos
+            </Scrollchor>
+          </Li>
           <Li><FontAwesomeIcon icon={faFacebook} /></Li>
         </Right>
       </Nav>

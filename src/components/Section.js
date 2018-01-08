@@ -71,6 +71,10 @@ const Inner = styled.div`
   align-items: ${props => props.align ? props.align : 'center'};
   display: ${props => props.display ? props.display : 'flex'};
   justify-content: center;
+  @media (max-width: 800px) {
+    height: auto;
+    max-height: none;
+  }
 `
 
 const Section = ({

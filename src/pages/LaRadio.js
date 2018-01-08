@@ -7,6 +7,10 @@ import RadioMegaLogo from './radio-mega.png'
 
 const Div = styled.div`
   display: flex;
+  flex-direction: row;
+  @media (max-width: 800px) {
+    flex-direction: column;
+  }
 `
 
 const P = styled.p`
@@ -15,6 +19,11 @@ const P = styled.p`
 
 const Img = styled.img`
   filter: invert(1);
+  @media (max-width: 800px) {
+    height: 200px;
+    width: 200px;
+    margin: 2em auto;
+  }
 `
 
 const LaRadio = () => (

@@ -14,6 +14,7 @@ import LeProjet from './LeProjet'
 import LesActeurs from './LesActeurs'
 import LesPartenaires from './LesPartenaires'
 import LaFiction from './LaFiction'
+import APropos from './APropos'
 
 const Div = styled.div`
 `
@@ -49,6 +50,7 @@ const IndexPage = () => (
       <Slider />
     </Section>
     <LesActeurs />
+    <APropos />
     <LesPartenaires />
   </Div>
 )

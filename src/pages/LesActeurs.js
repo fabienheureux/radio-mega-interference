@@ -4,43 +4,96 @@ import styled from 'styled-components'
 import Section from '../components/Section'
 
 const data = [
-  {
-    name: 'name',
-    role: 'role',
-  },
-  {
-    name: 'name',
-    role: 'role',
-  },
-  {
-    name: 'name',
-    role: 'role',
-  },
-  {
-    name: 'name',
-    role: 'role',
-  }
+	{
+		role: 'PABLO',
+		name: 'David CHION'
+	},
+	{
+		role: 'ALBAN',
+		name: 'Pascal GUERIN'
+	},
+	{
+		role: "L'ANGLAISE",
+		name: 'Alison CARTER',
+	},
+	{
+		role: 'LE PERE',
+		name: 'Eric BARAL',
+	},
+	{
+		role: 'LA MERE',
+		name: 'Helene CRUZ',
+	},
+	{
+		role: 'DOUGLAS',
+		name: 'Jim PAYNE',
+	},
+	{
+		role: 'UNE ETUDIANTE',
+		name: 'Julie CHOQUET',
+	},
+	{
+		role: 'CHLOE',
+		name: 'Ingrid Lebrasseur',
+	},
+	{
+		role: 'ANNA',
+		name: 'Muriel LAVAL',
+	},
+	{
+		role: 'ROBERT',
+		name: 'Philippe NADAL',
+	},
+	{
+		role: 'BRIGITTE',
+		name: 'Sylvie MABILON',
+	},
+	{
+		role: 'ALAIN',
+		name: 'Raphael TERRIBILE',
+	},
+	{
+		role: 'MOHAMED',
+		name: 'Rabah Nouara',
+	},
+	{
+		role: 'UN POLICIER',
+		name: 'Laurent GALANDON',
+	},
+	{
+		role: 'DUBREUIL',
+		name: 'Nicolas CROUAN',
+	},
+	{
+		role: 'LE DETENU',
+		name: 'Serge BAYO',
+	},
+	{
+		role: 'PATRICK',
+		name:'Bastien ENARD'
+	}
 ]
 
 const Acteur = styled.div`
   display: flex;
-  flex-direction: column;
-  padding-right: .5em;
-  align-items: center;
-  width: 100%/${props => props.width};
+  flex-direction: row;
+	p {
+		margin-bottom: 0;
+	}
 `
 
-const Name = styled.h3`
-  text-transform: uppercase;
-  margin-bottom: 0.5rem;
-  text-align: center;
+const Name = styled.p`
+	margin-left: 5px;
 `
 
 const P = styled.p`
 `
 
 const Acteurs = styled.div`
-  display: flex;
+	column-count: 2;
+  @media (max-width: 800px) {
+    column-count: 1;
+  }
 `
 
 const LesActeurs = () => (
@@ -52,8 +105,7 @@ const LesActeurs = () => (
     <Acteurs>
       {data.map(({ name, role }) =>
         <Acteur width={data.length}>
-          <Name>{name}</Name>
-          <P>{role}</P>
+          <P>{role}</P>: <Name>{name}</Name>
         </Acteur>
       )}
     </Acteurs>
