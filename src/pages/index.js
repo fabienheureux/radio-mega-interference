@@ -46,11 +46,11 @@ const IndexPage = () => (
     <LeProjet />
     <LaurentGalandon id="laurent-galandon" />
     <LaRadio />
+    <APropos />
     <Section display="block" background="black" id="photos">
       <Slider />
     </Section>
     <LesActeurs />
-    <APropos />
     <LesPartenaires />
   </Div>
 )

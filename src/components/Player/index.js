@@ -13,6 +13,7 @@ const Duration = styled.div`
   height: 10px;
   border-radius: 5px;
   overflow: hidden;
+  cursor: pointer;
 `
 
 const Loaded = styled.div`
@@ -30,7 +31,13 @@ const Position = styled.div`
   right: auto;
   top: 0;
   bottom: 0;
-  background: #333;
+  background: #fff;
+  z-index: 1;
+`
+
+const Numbers = styled.div`
+  font-size: 20px;
+  margin-left: 10px;
 `
 
 const Wrapper = styled.div`
@@ -60,6 +67,7 @@ class Player extends Component {
     this.handlePlaying = this.handlePlaying.bind(this)
     this.handleClick = this.handleClick.bind(this)
     this.handleLoading = this.handleLoading.bind(this)
+    this.handleChangePosition = this.handleChangePosition.bind(this)
   }
 
   handlePlaying({ position, duration }) {
@@ -92,6 +100,16 @@ class Player extends Component {
 	  })
 	}
 
+	handleChangePosition(e) {
+	  const test = e.nativeEvent.offsetX / e.nativeEvent.srcElement.offsetWidth
+	  this.setState(() => {
+	    return {
+	      ...this.state,
+	      position: this.state.duration * test,
+	    }
+	  })
+	}
+
   render() {
     const convertMs = milliseconds => {
       return {
@@ -106,8 +124,6 @@ class Player extends Component {
 
     const formatNumber = numberToFormat => `${0}${numberToFormat}`.slice(-2)
 
-    console.log(convertMs(this.state.position))
-
     return(
       <Wrapper>
 			  <div onClick={this.handleClick}>
@@ -116,8 +132,8 @@ class Player extends Component {
 			      <FontAwesomeIcon icon={faPauseCircle} />
 			    }
 		    </div>
-		    <Duration>
-		      <Position style={{width: `${this.state.position}%`}} />
+		    <Duration onClick={this.handleChangePosition}>
+		      <Position style={{width: `${this.state.position*100/this.state.duration}%`}} />
 		      <Loaded style={{width: `${this.state.loaded}%`}} />
 		    </Duration>
         <Sound
@@ -125,8 +141,9 @@ class Player extends Component {
           onLoading={this.handleLoading}
           url={track}
           playStatus={Sound.status[this.state.status]}
+          position={this.state.position}
         />
-        {formatNumber(convertMs(this.state.position).minutes)}:{formatNumber(convertMs(this.state.position).seconds)}
+        <Numbers>{formatNumber(convertMs(this.state.position).minutes)}:{formatNumber(convertMs(this.state.position).seconds)}</Numbers>
       </Wrapper>
     )
   }

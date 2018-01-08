@@ -95,6 +95,11 @@ class Header extends Component {
             </Scrollchor>
           </Li>
           <Li>
+            <Scrollchor to="#a-propos" title="A propos">
+              à propos
+            </Scrollchor>
+          </Li>
+          <Li>
             <Scrollchor to="#photos" title="Photos">
               Photos
             </Scrollchor>
@@ -109,12 +114,7 @@ class Header extends Component {
               les Partenaires
             </Scrollchor>
           </Li>
-          <Li>
-            <Scrollchor to="#a-propos" title="A propos">
-              à propos
-            </Scrollchor>
-          </Li>
-          <Li><FontAwesomeIcon icon={faFacebook} /></Li>
+          <Li><a href="https://facebook.com/Interférences-1753776774907151/" target="_blank" title="Facebook"><FontAwesomeIcon icon={faFacebook} /></a></Li>
         </Right>
       </Nav>
     )
