@@ -35,7 +35,7 @@ const DargaudImg = styled.img`
 `
 
 const LesPartenaires = () => (
-  <div>
+  <div id="les-partenaires">
     <Div className="primary">
       <a href="https://www.radio-mega.com/" target="_blank" title="Radio mega">
         <Img src={RadioMega} alt="Radio mega" />
