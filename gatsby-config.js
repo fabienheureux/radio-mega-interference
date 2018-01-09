@@ -1,5 +1,4 @@
 module.exports = {
-  pathPrefix: `/radio-mega-interference`,
   siteMetadata: {
     title: `Interférence - Radio Mega`,
   },
